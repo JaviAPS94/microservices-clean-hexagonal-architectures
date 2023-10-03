@@ -2,4 +2,4 @@
 
 ## Architecture
 
-![Project Structure](docs/diagrams/architecture.svg)
+![Project Structure](docs/diagrams/architecture.png)
