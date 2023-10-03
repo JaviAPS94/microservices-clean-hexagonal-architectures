@@ -1,1 +1,5 @@
-# microservices-clean-hexagonal-architectures
+# Microservices-clean-hexagonal-architectures
+
+## Architecture
+
+![Project Structure](docs/diagrams/architecture.svg)
