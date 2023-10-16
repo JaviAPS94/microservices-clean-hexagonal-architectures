@@ -1,0 +1,37 @@
+digraph "order-service" {
+  node [shape="box",style="rounded",fontname="Helvetica",fontsize="14"]
+  edge [fontsize="10",fontname="Helvetica"]
+
+  // Node Definitions:
+  "org.jetbrains.kotlin:kotlin-test:jar"[label=<kotlin-test<font point-size="10"><br/>(test)</font>>]
+  "org.jetbrains.kotlin:kotlin-test-common:jar"[label=<kotlin-test-common<font point-size="10"><br/>(test)</font>>]
+  "org.jetbrains.kotlin:kotlin-test-junit5:jar"[label=<kotlin-test-junit5<font point-size="10"><br/>(test)</font>>]
+  "org.junit.jupiter:junit-jupiter-api:jar"[label=<junit-jupiter-api<font point-size="10"><br/>(test)</font>>]
+  "org.opentest4j:opentest4j:jar"[label=<opentest4j<font point-size="10"><br/>(test)</font>>]
+  "org.junit.platform:junit-platform-commons:jar"[label=<junit-platform-commons<font point-size="10"><br/>(test)</font>>]
+  "com.food.ordering.system:order-service:pom"[label=<order-service>]
+  "org.junit.jupiter:junit-jupiter-engine:jar"[label=<junit-jupiter-engine<font point-size="10"><br/>(test)</font>>]
+  "org.junit.platform:junit-platform-engine:jar"[label=<junit-platform-engine<font point-size="10"><br/>(test)</font>>]
+  "org.apiguardian:apiguardian-api:jar"[label=<apiguardian-api<font point-size="10"><br/>(test)</font>>]
+  "org.jetbrains.kotlin:kotlin-stdlib:jar"[label=<kotlin-stdlib>]
+  "org.jetbrains.kotlin:kotlin-stdlib-common:jar"[label=<kotlin-stdlib-common>]
+  "org.jetbrains:annotations:jar"[label=<annotations>]
+  "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar"[label=<kotlin-stdlib-jdk8>]
+  "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar"[label=<kotlin-stdlib-jdk7>]
+
+  // Edge Definitions:
+  "org.jetbrains.kotlin:kotlin-test:jar" -> "org.jetbrains.kotlin:kotlin-test-common:jar"
+  "org.jetbrains.kotlin:kotlin-test-junit5:jar" -> "org.jetbrains.kotlin:kotlin-test:jar"
+  "org.junit.jupiter:junit-jupiter-api:jar" -> "org.opentest4j:opentest4j:jar"
+  "org.junit.jupiter:junit-jupiter-api:jar" -> "org.junit.platform:junit-platform-commons:jar"
+  "org.jetbrains.kotlin:kotlin-test-junit5:jar" -> "org.junit.jupiter:junit-jupiter-api:jar"
+  "com.food.ordering.system:order-service:pom" -> "org.jetbrains.kotlin:kotlin-test-junit5:jar"
+  "org.junit.jupiter:junit-jupiter-engine:jar" -> "org.junit.platform:junit-platform-engine:jar"
+  "org.junit.jupiter:junit-jupiter-engine:jar" -> "org.apiguardian:apiguardian-api:jar"
+  "com.food.ordering.system:order-service:pom" -> "org.junit.jupiter:junit-jupiter-engine:jar"
+  "org.jetbrains.kotlin:kotlin-stdlib:jar" -> "org.jetbrains.kotlin:kotlin-stdlib-common:jar"
+  "org.jetbrains.kotlin:kotlin-stdlib:jar" -> "org.jetbrains:annotations:jar"
+  "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar" -> "org.jetbrains.kotlin:kotlin-stdlib:jar"
+  "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar"
+  "com.food.ordering.system:order-service:pom" -> "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar"
+}
